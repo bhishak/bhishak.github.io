@@ -8,6 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
     <style>
         body,
         html {
@@ -24,7 +25,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #1a1a1d;
+            /* background: #1a1a1d; */
         }
 
         #background {
@@ -67,11 +68,100 @@
             margin-bottom: 1rem;
         }
 
+        .skill-badge {
+            display: inline-block;
+            background: #0077ff;
+            color: white;
+            padding: 0.5rem 1rem;
+            margin: 0.2rem;
+            border-radius: 0.5rem;
+        }
+
         footer {
             background: #1a1a1d;
             color: white;
             padding: 1rem;
             text-align: center;
+        }
+
+        .project-card {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            max-width: 300px;
+            margin: auto;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .shimmer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -200% 0;
+            }
+            100% {
+                background-position: 200% 0;
+            }
+        }
+
+        .contact-section {
+            text-align: center;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-section img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        .contact-section p {
+            margin: 0.5rem 0;
+        }
+
+        .contact-section a {
+            color: #0077ff;
+            text-decoration: none;
+        }
+
+        .contact-section a:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons {
+            margin-bottom: 1rem;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .social-icons a:hover {
+            color: #0077ff;
+        }
+        .social-icons-invert {
+            filter: invert(1);
         }
     </style>
 </head>
@@ -91,6 +181,7 @@
                     <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -102,9 +193,17 @@
         <div>
             <h1>Bhishak Mittal</h1>
             <h2>Backend Developer | Software Engineer</h2>
-            <p>Email: <a href="mailto:mittalbhishak06@gmail.com" style="color:white;">mittalbhishak06@gmail.com</a></p>
-            <p>Phone: <a href="tel:+919872989996" style="color:white;">+91 9872989996</a></p>
-            <a class="btn btn-primary" href="#about" role="button">Explore More</a>
+            <div class="social-icons mt-4">
+                <a href="https://linkedin.com/in/bhishak" target="_blank"><i class="bi bi-linkedin"></i></a>
+                <a href="https://instagram.com/bhishak_mittal" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://github.com/bhishak" target="_blank"><i class="bi bi-github"></i></a>
+                <a href="mailto:mittalbhishak06@gmail.com"><i class="bi bi-envelope"></i></a>
+            </div>
+            <div class="mt-2">
+            <a class="btn btn-primary me-2" href="assets/BhishakResume.pdf" target="_blank">Resume</a>
+            <span class="ml-4"></span>
+            <a class="btn btn-primary ml-4" href="#about" role="button">Explore More</a>
+            </div>
         </div>
     </header>
 
@@ -114,12 +213,6 @@
             programming, and scalable architecture. My expertise lies in building microservices, enhancing system
             reliability, and mentoring colleagues in programming.</p>
     </section>
-
-    <!-- About Section -->
-    <!-- <section id="about" class="container">
-        <h2 class="section-title">About Me</h2>
-        <p>I am a Backend Software Engineer with over 3 years of experience specializing in backend development, meta programming, and scalable architecture. My expertise lies in building microservices, enhancing system reliability, and mentoring colleagues in programming.</p>
-    </section> -->
 
     <!-- Skills Section -->
     <section id="skills" class="container">
@@ -135,6 +228,14 @@
             <span class="skill-badge">Docker</span>
             <span class="skill-badge">Meta Programming</span>
             <span class="skill-badge">Distributed Systems</span>
+            <span class="skill-badge">JavaScript</span>
+            <span class="skill-badge">Angular.js</span>
+            <span class="skill-badge">MongoDB</span>
+            <span class="skill-badge">Junit</span>
+            <span class="skill-badge">Mockito</span>
+            <span class="skill-badge">VSCode</span>
+            <span class="skill-badge">UML</span>
+            <span class="skill-badge">Linux Basics</span>
         </div>
     </section>
 
@@ -147,6 +248,8 @@
             <ul>
                 <li>Spearheaded scalable microservices architecture design and implementation.</li>
                 <li>Developed a configurable library for databases and REST APIs.</li>
+                <li>Created a generic library to streamline logging and messaging queues.</li>
+                <li>Adhered to clean code principles and maintained 100% test coverage.</li>
                 <li>Tech Stack: Java, Spring Boot, MySQL, Apache Artemis.</li>
             </ul>
         </div>
@@ -158,20 +261,57 @@
                 <li>Enhanced development processes and maintained application functionality using Python.</li>
             </ul>
         </div>
+        <div class="card p-3">
+            <h3>Software Developer Intern + Part-time | myHQ</h3>
+            <p><strong>Dec 2019 - Mar 2021</strong></p>
+            <ul>
+                <li>Developed and optimized a dynamic SEO system using Node.js and Angular.</li>
+                <li>Implemented image optimization strategies, improving load times and reducing FCP by 300%.</li>
+                <li>Boosted Lighthouse performance metrics from 35% to 92% through strategic optimizations.</li>
+                <li>Streamlined the project environment by integrating Docker, enhancing cloud deployment efficiency.</li>
+                <li>Bypassed ad blockers, doubling data collection from desktop users.</li>
+                <li>Tech Stack: Node.js, Angular.</li>
+            </ul>
+        </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="container">
         <h2 class="section-title">Projects</h2>
-        <div class="card p-3">
-            <h3>Saathi The Smart Pendant</h3>
-            <p>Smart wearable with live location tracking and scene detection.</p>
-            <a href="https://www.linkedin.com/posts/bhishak_deeplearning-innovation-project-activity-6594945044686430208-xxMl">Project Link</a>
-        </div>
-        <div class="card p-3">
-            <h3>Smart Workplace</h3>
-            <p>Biometric-free attendance and NFC Smart Purchase Card to prevent skimming.</p>
-            <a href="https://www.linkedin.com/posts/tavish-bhandari_management-database-team-activity-6848993192176627713-PCY5">Project Link</a>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <div class="shimmer"></div>
+                    <img src="assets/project1.png" alt="Saathi The Smart Pendant" class="project-image">
+                    <div class="card-body">
+                        <h3 class="card-title">Saathi The Smart Pendant</h3>
+                        <p class="card-text">Smart wearable with live location tracking and scene detection.</p>
+                        <a href="https://www.linkedin.com/posts/bhishak_deeplearning-innovation-project-activity-6594945044686430208-xxMl" class="btn btn-primary">Project Link</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <div class="shimmer"></div>
+                    <img src="assets/project2.png" alt="Smart Workplace" class="project-image">
+                    <div class="card-body">
+                        <h3 class="card-title">Smart Workplace</h3>
+                        <p class="card-text">Biometric-free attendance and NFC Smart Purchase Card to prevent skimming.</p>
+                        <a href="https://www.linkedin.com/posts/tavish-bhandari_management-database-team-activity-6848993192176627713-PCY5" class="btn btn-primary">Project Link</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <div class="shimmer"></div>
+                    <img src="assets/project3.png" alt="Eye Web Player" class="project-image">
+                    <div class="card-body">
+                        <h3 class="card-title">Eye Web Player</h3>
+                        <p class="card-text">Web player with keyboard control and pupil tracking, built in Angular.js.</p>
+                        <a href="https://github.com/your-repo-link" class="btn btn-primary">Project Link</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -185,45 +325,178 @@
         </div>
     </section>
 
+    <!-- Certifications Section -->
+    <section id="certifications" class="container">
+        <h2 class="section-title">Certifications</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h3>Deep Learning and Neural Networks</h3>
+                    <p>Score: 93%</p>
+                    <a href="https://www.coursera.org/account/accomplishments/verify/6G2UG5YJHXN8">Certification Link</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h3>Improving Deep Neural Networks: Hyperparameter Tuning, Regularization, and Optimization</h3>
+                    <p>Score: 92%</p>
+                    <a href="https://www.coursera.org/account/accomplishments/verify/7FTYL8SVNR7W">Certification Link</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h3>Algorithmic Toolbox - Computer Science</h3>
+                    <p>Score: 79%</p>
+                    <a href="https://www.coursera.org/account/accomplishments/verify/HA2TFM3R5GT9">Certification Link</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="container">
+        <h2 class="section-title">Achievements</h2>
+        <div class="card p-3">
+            <h3>Site Level Python Trainer | STMicroelectronics, Noida</h3>
+            <p>Continuously mentoring colleagues in Python programming.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-section">
+            <img src="assets/icon.jpg" alt="Bhishak Mittal">
+            <p>Name: Bhishak Mittal</p>
+            <p>Email: <a href="mailto:mittalbhishak06@gmail.com">mittalbhishak06@gmail.com</a></p>
+            <p>Phone: <a href="tel:+919872989996">+91 9872989996</a></p>
+            <div class="social-icons">
+                <a href="https://linkedin.com/in/bhishak" target="_blank"><i class="bi bi-linkedin social-icons-invert"></i></a>
+                <a href="https://instagram.com/bhishak_mittal" target="_blank"><i class="bi bi-instagram social-icons-invert"></i></a>
+                <a href="https://github.com/bhishak" target="_blank"><i class="bi bi-github social-icons-invert"></i></a>
+                <a href="mailto:mittalbhishak06@gmail.com"><i class="bi bi-envelope social-icons-invert"></i></a>
+            </div>
+            <a class="btn btn-primary text-white" href="resume" target="_blank">Download Resume</a>
+        </div>
+    </section>
+
     <footer>
         <p>&copy; 2025 Bhishak Mittal. All Rights Reserved.</p>
     </footer>
 
     <script>
-        // Three.js Background Animation
-        const canvas = document.querySelector('#background');
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({ canvas });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setPixelRatio(window.devicePixelRatio);
-        camera.position.setZ(30);
+            // Three.js Background Animation
+            const canvas = document.querySelector('#background');
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ canvas});
 
-        const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
-        const material = new THREE.MeshBasicMaterial({ color: 0x0077ff, wireframe: true });
-        const torus = new THREE.Mesh(geometry, material);
-        scene.add(torus);
-
-        function animate() {
-            requestAnimationFrame(animate);
-            torus.rotation.x += 0.01;
-            torus.rotation.y += 0.01;
-            renderer.render(scene, camera);
-        }
-
-        animate();
-
-        // Handle responsive resizing
-        window.addEventListener('resize', () => {
+            // const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
+            renderer.setClearColor(0x1a1a1d, 1); // Set clear color to black (0x000000) and fully transparent (0)
             renderer.setSize(window.innerWidth, window.innerHeight);
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
-        });
+            renderer.setPixelRatio(window.devicePixelRatio);
+            camera.position.setZ(30);
+    
+            // Create a single cube
+            const geometry = new THREE.BoxGeometry(5, 5, 5);
+            const material = new THREE.MeshBasicMaterial({ color: 0x0077ff, wireframe: true });
+            const cube = new THREE.Mesh(geometry, material);
+            scene.add(cube);
+    
+            // Variables for cube movement
+            let directionX = 0.1;
+            let directionY = 0.1;
+    
+            function animate() {
+                requestAnimationFrame(animate);
+    
+                // Move the cube
+                cube.position.x += directionX;
+                cube.position.y += directionY;
+    
+                // Check for boundaries and reverse direction if needed
+                if (cube.position.x > 20 || cube.position.x < -20) {
+                    directionX = -directionX;
+                }
+                if (cube.position.y > 20 || cube.position.y < -20) {
+                    directionY = -directionY;
+                }
+    
+                cube.rotation.x += 0.01;
+                cube.rotation.y += 0.01;
+    
+                renderer.render(scene, camera);
+            }
+    
+            animate();
+    
+            // Handle responsive resizing
+            window.addEventListener('resize', () => {
+                renderer.setSize(window.innerWidth, window.innerHeight);
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+            });
+    
+            // Navbar hide and show on scroll
+            let lastScrollTop = 0;
+            window.addEventListener('scroll', function () {
+                const navbar = document.getElementById('navbar');
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > lastScrollTop) {
+                    // Scroll down
+                    navbar.style.top = '-80px';
+                } else {
+                    // Scroll up
+                    navbar.style.top = '0';
+                }
+                lastScrollTop = scrollTop;
+    
+                // Make the cube react to scroll
+                const scrollPercent = scrollTop / (document.documentElement.scrollHeight - window.innerHeight);
+                cube.position.y = (scrollPercent * 40) - 20; // Adjust the range as needed
+            });
+    
+            // Smooth scroll animation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+    
+            // Shimmer effect for project images
+            document.querySelectorAll('.project-image').forEach(img => {
+                img.onload = () => {
+                    img.previousElementSibling.style.display = 'none';
+                };
+                img.onerror = () => {
+                    img.previousElementSibling.style.display = 'none';
+                };
+            });
+    
+            // Close navbar on mobile after click
+            document.addEventListener('click', function (event) {
+                const navbar = document.getElementById('navbarNav');
+                const navbarToggler = document.querySelector('.navbar-toggler');
+                if (navbar.classList.contains('show') && !navbar.contains(event.target) && !navbarToggler.contains(event.target)) {
+                    navbarToggler.click();
+                }
+            });
+    
+            document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    const navbarToggler = document.querySelector('.navbar-toggler');
+                    if (window.getComputedStyle(navbarToggler).display !== 'none') {
+                        navbarToggler.click();
+                    }
+                });
+            });
     </script>
-
-    <!-- Add Bootstrap and Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
-</html>
+        <!-- Add Bootstrap and Popper.js -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+    
+    </html>
